@@ -10,7 +10,12 @@ data <- na.omit(read.csv("2017-2023-10-Checkouts-SPL-Data.csv"))
 #   What year were there the most number of overall checkouts?
 year <- data %>%
   group_by(CheckoutYear) %>%
-  summarize(total_checkouts = sum(Checkouts))
+  summarize(total_checkouts = sum(Checkouts)) 
+
+highest_co_year <- year %>%
+  filter(total_checkouts == max(total_checkouts)) %>%
+  pull(CheckoutYear)
+  
 
 # At what date were there the highest number of checkouts for books with "Hunger Games" in the title?
 hg_data <- data %>%
