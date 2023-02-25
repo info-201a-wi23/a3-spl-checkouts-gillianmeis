@@ -1,86 +1,57 @@
 ---
 title: "A3: SPL Library Checkouts"
+author: "by Gillian Soekawan"
 output: html_document
 ---
 
 ### Introduction
+I chose to analyze data on the number of checkouts of Hunger Games, Maze Runner, and Harry Potter books. I mainly chose these specific books because they were series that were adapted into films, and I was interested to see the way the number of checkouts for these books changed overtime, especially during the time of the movie versions' releases. I also decided to take a look at the frequency or magnitude of checkouts depending on material types and usage classes because I wanted to analyze trends on checkouts that can describe the change in people's preferences and attention spans over the course of time as technology continued to advance. 
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+(A limitation of all the charts is that the 2023 data is always significantly lower than the checkout data in all previous years because 2023 is still ongoing and the checkout data is correspondingly incomplete.)
+
 
 ### Summary Information
+I decided to answer these questions for my summary analysis:
+- What year were there the most number of overall checkouts?
+- At what date were there the highest number of checkouts for books with "Hunger Games" in the title?
+- What is the date with the most checkouts for books with the words "Harry Potter" included in the title?
+- What is the Publisher Company with the most checkouts in 2022?
+- What is the year with the highest E-Book to Book ratio in checkouts?
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
-
-Feel free to calculate and report values that you find relevant.
+I found that 2020 was the year that was the answer to a majority of my questions, insinuating that 2020 saw the highest amount of checkout activity. Specifically, the year that had the highest number of overall checkouts, the year that had the most "Hunger Games" checkouts, and the year that had the most "Harry Potter" checkouts was 2020. This contradicted my predictions because I had expected for the most number of checkouts for these books to be closer to their films' release dates. However, after thinking about how the pandemic occurred in 2020, I can see how the large amount of checkouts may be attributed to this. On the other hand, I just wanted to play around with what publisher was the most popular in checkout data and I was surprised to find out that it was of a company that I had never heard of, Random House, Inc. Lastly, I found that the year with the highest E-book to Book ratio in checkouts was also 2020, further supporting the idea that people were reading more during the pandemic remotely, in their own homes and digitally.
 
 ### The Dataset
-
 - Who collected/published the data?  
 - What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
 - How was the data collected or generated?  
 - Why was the data collected?  
 - What, if any, ethical questions do you need to consider when working with this data?  
-- What are possible limitations or problems with this data?   (at least 200 words)
+- What are possible limitations or problems with this data?
+
+The Seattle Public Library publishes and updates a dataset that includes a monthly count of their checkouts depending on their titles for both physical and electronic goods. This data is made openly available by the Open Data Program for the purposes of promoting transparency, inclusivity, accountability and comparability. The data begins from April of 2005 and has the parameters of Usage class, Checkout type, Material Type, Checkout Year, Checkout Month, Checkout count, Title, ISBN, Creator, Subjects, Publisher, and Publication Year, consisting of information in 42 million checkouts (rows). The data was collected for keeping record of which books are popular, and for analysis to cultivate economic development and research.
+
+An ethical questions we should ask ourselves when working with this data is,
+Do the people checking out books and other mediums know that data on them is being collected and shared?
+
+I think that the largest limitation of this data is that it doesn't show how people are interacting with the media they checked out. For example, if we were to study the data to make conclusions about people's attention spans and how we have changed the way we interact with hardcopy mediums as opposed to digital ones, we wouldn't really be able to come to a solid conclusion because the data only shows us what is checked out, and doesn't keep track of what is done with the medium thereafter.
 
 
-### First Trends Over Time Chart
+### Harry Potter and Hunger Games Checkouts Over Time
+I included this chart because I wanted to see how the number of checkouts of Harry Potter and Hunger Games books changed over time, especially with respect to the movie adaptations' release years. Harry Potter books checkouts were significantly higher than that of Hunger Games books but we can tell from the chart that there were a lot of fluctuations in the checkout data and that in some years, there were significantly more checkouts for the books than in other years. When looking at the Harry Potter line graph, I immediately noticed that there were spikes in checkouts in the years 2012, 2017 and 2020. This didn't align with my prediction of checkout spikes correlating to the movie release dates because the last Harry Potter film was released in 2011. On the other hand, there were spikes in Hunger Games checkouts in 2012, 2014 and 2020. The Hunger Games films were released in 2012, 2013, 2014 and 2015, which somewhat aligns with the increase in its book checkouts. However, what both line graphs have in common is the spike in 2020, when the pandemic occured. 
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("chart1.R")}
 ```
 
-### Second Trends Over Time Chart
+### Harry Potter Checkouts and Material Types Proportions Over Time 
+I included this chart that showed the proportion of Material Types of checkouts with the total Harry Potter checkouts over the years because I wanted to see whether or not people's affinity for reading physical books has died down over the years. Especially because Harry Potter had already been adapted into a movie series, I wondered if people just decide to watch the movies instead of reading the books. However, contrary to my predictions, the number of book checkouts over the years remained relatively similar and the biggest difference I noticed was the increase in the proportion of audiobook checkouts over time, with there being zero audiobook checkouts in 2005 and the most audio checkouts in 2022. 
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```{r, echo = FALSE, message = FALSE, code = readLines("chart2.R")}
 ```
 
-### Your Choice
+### Audiobook and Ebook Checkouts Over Time
+I included this chart because I wanted to see how the checkouts between audiobooks and ebooks to study the "superiority" between actually reading material to listening to someone recite a book to you. I predicted that there would be audiobook checkouts would increase at a larger rate than that of ebooks mainly because I felt as if audiobooks such as Audible were popularizing listening to books while multitasking and doing other things. However, the chart proved me wrong and I found it interesting that the rate at which both audiobook and ebook checkouts increased was very similar and consistent. However, the number of ebook checkouts were always higher than that of audiobooks.
 
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```{r, echo = FALSE, message = FALSE, code = readLines("chart3.R")}
 ```
 
 
