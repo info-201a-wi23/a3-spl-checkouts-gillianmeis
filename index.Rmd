@@ -49,7 +49,7 @@ I included this chart that showed the proportion of Material Types of checkouts 
 ```
 
 ### Audiobook and Ebook Checkouts Over Time
-I included this chart because I wanted to see how the checkouts between audiobooks and ebooks to study the "superiority" between actually reading material to listening to someone recite a book to you. I predicted that there would be audiobook checkouts would increase at a larger rate than that of ebooks mainly because I felt as if audiobooks such as Audible were popularizing listening to books while multitasking and doing other things. However, the chart proved me wrong and I found it interesting that the rate at which both audiobook and ebook checkouts increased was very similar and consistent. However, the number of ebook checkouts were always higher than that of audiobooks.
+I included this chart because I wanted to see how the checkouts between audiobooks and ebooks change to study the "superiority" between actually reading material to listening to someone recite a book to you. I predicted that the audiobook checkouts would increase at a larger rate than that of ebooks mainly because I felt as if audiobooks such as Audible were popularizing listening to audio books while multitasking and doing other things. However, the chart proved me wrong and I found it interesting that the rate at which both audiobook and ebook checkouts increased was very similar and consistent. However, the number of ebook checkouts were always higher than that of audiobooks.
 
 ```{r, echo = FALSE, message = FALSE, code = readLines("chart3.R")}
 ```
